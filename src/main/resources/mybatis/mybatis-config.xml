@@ -27,6 +27,7 @@
       
       <typeAliases>
             <typeAlias alias="RecentlyVO" type="com.fallsta.abdog.VO.RecentlyVO"></typeAlias>
+            <typeAlias alias="BasicVO" type="com.fallsta.abdog.VO.BasicVO"></typeAlias>
       </typeAliases>
  
  
