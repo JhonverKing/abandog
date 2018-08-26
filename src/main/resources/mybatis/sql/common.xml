@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   
+<mapper namespace="com.fallsta.abdog.dashboard">
+
+	<resultMap id="resultRecently" type="RecentlyVO">
+		<result property="id" column="id" />
+		<result property="desertionNo" column="desertion_no" />
+		<result property="thumImg" column="thum_img" />
+		<result property="happenDt" column="happen_dt" />
+		<result property="happenPlace" column="happenPlace" />
+		<result property="kindName" column="kind_name" />
+		<result property="kindCode" column="kind_code" />
+		<result property="colorCode" column="color_code" />
+		<result property="age" column="age" />
+		<result property="weight" column="weight" />
+		<result property="noticeNo" column="notice_no" />
+		<result property="noticeStart" column="notice_start" />
+		<result property="noticeEnd" column="notice_end" />
+		<result property="img" column="img" />
+		<result property="processState" column="process_state" />
+		<result property="sexCode" column="sex_code" />
+		<result property="neuter" column="neuter" />
+		<result property="specialMark" column="special_mark" />
+		<result property="careCode" column="care_code" />
+		<result property="careName" column="care_name" />
+		<result property="careTel" column="care_tel" />
+		<result property="careAddr" column="care_addr" />
+		<result property="chargeName" column="charge_name" />
+		<result property="officeTel" column="office_tel" />
+		<result property="noticeComment" column="notice_comment" />
+		<result property="orgName" column="org_name" />
+		<result property="orgUpName" column="org_up_name" />
+		<result property="orgUpCode" column="org_up_code" />
+		<result property="orgDownName" column="org_down_name" />
+		<result property="orgDownCode" column="org_down_code" />
+    </resultMap>
+	
+	<select id="getRecentlyValue" resultMap="resultRecently"> <!-- parameterType="TestVO"-->
+		select 
+			id
+			,desertion_no
+			,thum_img
+			,happen_dt
+			,happenPlace
+			,kind_name
+			,kind_code
+			,color_code
+			,age
+			,weight
+			,notice_no
+			,notice_start
+			,notice_end
+			,img
+			,process_state
+			,sex_code
+			,neuter
+			,special_mark
+			,care_code
+			,care_name
+			,care_tel
+			,care_addr
+			,charge_name
+			,office_tel
+			,notice_comment
+			,org_name
+			,org_up_name
+			,org_up_code
+			,org_down_name
+			,org_down_code
+		from 
+			dog_detail 
+		order by 
+			happen_dt desc
+		limit 1000
+	</select>
+</mapper>
