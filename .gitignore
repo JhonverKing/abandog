@@ -1,0 +1,8 @@
+
+src/main/webapp/WEB-INF/spring/db\.properties
+
+\.classpath
+
+\.settings/
+
+\target/*
