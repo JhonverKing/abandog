@@ -18,14 +18,19 @@ public class DashboardController {
 	private DashboardService dashboardService;
 	
 	@RequestMapping("/getRecentlyAbdog")
-	public List getRecentlyAbdog(BasicVO basicVO){ 
-		List<RecentlyVO> result = dashboardService.getRecentlyAbdog(basicVO);
+	public List getRecentlyAbdog(){ 
+		List<RecentlyVO> result = dashboardService.getRecentlyAbdog();
+		return result; 
+	}
+	
+	@RequestMapping("/getTodayAbdog")
+	public List getTodayAbdog(){ 
+		List<RecentlyVO> result = dashboardService.getTodayAbdog();
 		return result; 
 	}
 	
 	@RequestMapping("/getTest")
 	public String getTest(@RequestParam String str){   
 		return "test : "+str;
-		
 	}
 }

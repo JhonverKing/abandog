@@ -76,4 +76,42 @@
 			happen_dt desc
 		limit 1000
 	</select>
+	
+	<select id="getTodayValue" resultMap="resultRecently" parameterType="BasicVO">
+		select 
+			id
+			,desertion_no
+			,thum_img
+			,happen_dt
+			,happenPlace
+			,kind_name
+			,kind_code
+			,color_code
+			,age
+			,weight
+			,notice_no
+			,notice_start
+			,notice_end
+			,img
+			,process_state
+			,sex_code
+			,neuter
+			,special_mark
+			,care_code
+			,care_name
+			,care_tel
+			,care_addr
+			,charge_name
+			,office_tel
+			,notice_comment
+			,org_name
+			,org_up_name
+			,org_up_code
+			,org_down_name
+			,org_down_code
+		from
+			dog_detail
+		where
+			happen_dt = #{dt}
+	</select>
 </mapper>

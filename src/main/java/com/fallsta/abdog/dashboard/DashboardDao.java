@@ -20,8 +20,11 @@ public class DashboardDao {
 	@Resource(name="sqlSessionAbandog")
 	private SqlSession sqlSessionAbdog;
 	
-	public List<RecentlyVO> getRecentlyAbdog(BasicVO basicVO){
-		return  sqlSessionAbdog.selectList("com.fallsta.abdog.dashboard.getRecentlyValue", basicVO);
-		
+	public List<RecentlyVO> getRecentlyAbdog(){
+		return  sqlSessionAbdog.selectList("com.fallsta.abdog.dashboard.getRecentlyValue");
+	}
+	
+	public List<RecentlyVO> getTodayAbdog(BasicVO basicVO){
+		return  sqlSessionAbdog.selectList("com.fallsta.abdog.dashboard.getTodayValue", basicVO);
 	}
 }
