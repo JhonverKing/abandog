@@ -26,5 +26,6 @@ public class DashboardController {
 	@RequestMapping("/getTest")
 	public String getTest(@RequestParam String str){   
 		return "test : "+str;
+		
 	}
 }
