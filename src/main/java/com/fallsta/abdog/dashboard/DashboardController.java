@@ -29,6 +29,12 @@ public class DashboardController {
 		return result; 
 	}
 	
+	@RequestMapping("/getRangeAbdog")
+	public List getRangeAbdog(){ 
+//		List<RecentlyVO> result = dashboardService.getTodayAbdog();
+		return null; 
+	}
+	
 	@RequestMapping("/getTest")
 	public String getTest(@RequestParam String str){   
 		return "test : "+str;
